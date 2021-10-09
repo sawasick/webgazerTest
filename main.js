@@ -1,16 +1,10 @@
-var xprediction, yprediction;
 webgazer.setGazeListener(function(data, elapsedTime) {
     if (data == null) {
         return;
     }
-    xprediction = data.x;
-    yprediction = data.y;
+    var xprediction = data.x;
+    var yprediction = data.y;
+    var z = document.elementFromPoint(xprediction, yprediction);
+    console.log(z);
     // console.log(elapsedTime);
 }).begin();
-
-$(function(){
-  var z = document.elementFromPoint(xprediction, yprediction);
-
-  //コンソールログを残す
-  console.log(z);
-});
