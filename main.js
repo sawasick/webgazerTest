@@ -9,9 +9,10 @@ webgazer.setGazeListener(function(data, elapsedTime) {
     // console.log(z);
     if(z.hasAttribute('id')) {
       count++;
+      console.log(count);
     }
     if(count >= 50) {
-      z.remove();
+      z.classList.add('pink');
     }
     // console.log(elapsedTime);
 }).begin();
