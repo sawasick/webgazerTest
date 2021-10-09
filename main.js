@@ -7,7 +7,7 @@ webgazer.setGazeListener(function(data, elapsedTime) {
     var yprediction = data.y;
     var z = document.elementFromPoint(xprediction, yprediction);
     // console.log(z);
-    if(z.attr('box3')) {
+    if(z.attr() == 'box3') {
       count++;
     }
     if(count >= 50) {
