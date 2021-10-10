@@ -1,5 +1,7 @@
 .box-wrapper {
   display: flex;
+  position: relative;
+  z-index: 100;
 }
 
 .box1, .box2, .box3, .box4 {
@@ -24,4 +26,24 @@
 }
 .pink {
   background-color: pink !important;
+}
+
+.pale {
+  opacity: 0.3;
+}
+
+.target-info {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.count-info {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  font-size: 40px;
+  font-weight: bold;
 }
