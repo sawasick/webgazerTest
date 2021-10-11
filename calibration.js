@@ -107,17 +107,8 @@ $(document).ready(function(){
                           if (isConfirm){
                             //clear the calibration & hide the last middle button
                             ClearCanvas();
-                            $('body').append(`
-                            <div class="box-wrapper">
-                              <div class="box1" id="box1"></div>
-                              <div class="box2" id="box2"></div>
-                              <div class="box3" id="box3"></div>
-                              <div class="box4" id="box4"></div>
-                            </div>
-                            <p id="targetInfo" class="target-info">見ている要素</p>
-                            <p id="countInfo" class="count-info">カウンタ:0</p>
-                            <script src="main.js"></script>
-                            `);
+                            document.getElementById('box-wrapper').classList.remove('is-hide');
+                            $('body').append(`<script src="main.js"></script>`);
                           } else {
                             //use restart function to restart the calibration
                             document.getElementById("Accuracy").innerHTML = "<a>Not yet Calibrated</a>";

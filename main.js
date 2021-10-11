@@ -1,3 +1,4 @@
+console.log('hoge');
 var count = 0;
 var pElem;
 var info = document.getElementById('targetInfo');
@@ -19,25 +20,27 @@ webgazer.setGazeListener(function(data, elapsedTime) {
         info.innerHTML = zID;
       }
       z.classList.add('pale');
+      info.classList.add(zID);
       // 前フレームで見た要素と同じなら
       if (z == pElem) {
         count++;
         console.log(count);
       }else {
         pElem.classList.remove('pale');
+        info.classList.remove(pElem.getAttribute('id'));
         count = 0;
         pElem = z;
       }
   
-      info2.innerHTML = 'カウンタ:'+count;
+      // info2.innerHTML = 'カウンタ:'+count;
       // if(z.hasAttribute('id')) {
       //   count++;
       //   console.log(count);
       // }
-      if(count >= 50) {
-        z.classList.add('pink');
-        count = 0;
-      }
+      // if(count >= 50) {
+      //   z.classList.add('pink');
+      //   count = 0;
+      // }
       // console.log(elapsedTime);
     }
 }).begin();
