@@ -1,4 +1,4 @@
-console.log('hoge');
+// console.log('hoge');
 var count = 0;
 var pElem;
 var info = document.getElementById('targetInfo');
@@ -14,7 +14,7 @@ webgazer.setGazeListener(function(data, elapsedTime) {
       if (pElem == null) {
         pElem = z;
       }
-      console.log(z);
+      // console.log(z);
       if (z.hasAttribute('id')) {
         var zID = z.getAttribute('id');
         info.innerHTML = zID;
@@ -24,7 +24,7 @@ webgazer.setGazeListener(function(data, elapsedTime) {
       // 前フレームで見た要素と同じなら
       if (z == pElem) {
         count++;
-        console.log(count);
+        // console.log(count);
       }else {
         pElem.classList.remove('pale');
         info.classList.remove(pElem.getAttribute('id'));
