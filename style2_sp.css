@@ -1,5 +1,6 @@
 body {
     /* min-width:600px!important; */
+    width: 100vw !important;
 }
 
 button {
@@ -13,7 +14,7 @@ button {
  */
 }
 #webgazerVideoContainer {
-    /* display: block !important;  */
+    display: block !important; 
     position: fixed !important;
     top: 0px !important;
     left: 0px !important;
@@ -21,7 +22,7 @@ button {
     height: 240px !important;
     z-index: 1;
     opacity: 0.3 !important;
-    display: none !important;
+    /* display: none !important; */
 }
 
 /* Navbar styling */
